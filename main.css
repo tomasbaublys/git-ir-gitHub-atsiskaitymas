@@ -127,3 +127,41 @@ main::before {
     left: 50%;
     transform: translateX(-50%);
 }
+
+.tabDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(14, 14, 14, 0.673);
+    position: relative;
+    color: white;
+}
+
+.tabDiv img {
+    width: 70%;
+}
+
+.tabDiv > p {
+    width: 70%;
+}
+
+.tabDiv > i {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-weight: 900;
+    font-size: 65px;
+}
+
+.tabDiv h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 45px;
+    font-weight: 500;
+    border-bottom: 1px solid white;
+    align-self: self-start;
+    margin-left: 10%;
+}
