@@ -17,9 +17,9 @@ export default class TabManager {
 
     openTab(tab) {
         if (this.activeTab) {
-            this.contentContainer.innerHTML = "";
+            this.activeTab.remove(); 
         }
-        this.activeTab = tab;
-        this.contentContainer.appendChild(tab.createTabElement());
+        this.activeTab = tab.createTabElement();
+        this.contentContainer.appendChild(this.activeTab);
     }
 }

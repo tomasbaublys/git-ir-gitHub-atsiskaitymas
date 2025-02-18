@@ -114,42 +114,75 @@ main::before {
     height: 40px;
 }
 
+/* Tab Styling */
 .tabDiv {
-    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(14, 14, 14, 0.95);
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    width: 65%;
+    max-width: 900px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.15);
+    text-align: left;
+    z-index: 1000;
+    display: none; /* Hidden by default */
     flex-direction: column;
     align-items: center;
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: rgba(14, 14, 14, 0.673);
-    position: relative;
-    color: white;
 }
 
-.tabDiv img {
-    width: 70%;
+/* Show when active */
+.tabDiv.active {
+    display: flex !important;
 }
 
-.tabDiv > p {
-    width: 70%;
-}
-
-.tabDiv > i {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    font-weight: 900;
-    font-size: 65px;
-}
-
+/* Tab Title */
 .tabDiv h1 {
     text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 45px;
-    font-weight: 500;
-    border-bottom: 1px solid white;
-    align-self: self-start;
-    margin-left: 10%;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Tab Image */
+.tabDiv img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Tab Content */
+.tabDiv p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+    color: red;
 }
 
 /* Horizontal Lines */
