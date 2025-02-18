@@ -10,11 +10,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 main::before {
@@ -41,7 +43,7 @@ main::before {
 
 .metaText {
     width: 70%;
-    padding: 20px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -53,9 +55,7 @@ main::before {
 }
 
 .metaText p {
-    font-size: 1.1rem;
-    font-weight: 300;
-    max-width: 700px;
+    font-weight: 100;
     margin: auto;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -84,6 +84,7 @@ main::before {
     max-width: 300px;
     background-color: transparent;
     border: 1px solid white;
+    border-radius: 2px;
     color: white;
     width: 160px;
     height: 50px;
@@ -99,9 +100,9 @@ main::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
-    border: 2px solid rgb(255, 255, 255);
+    width: 110px;
+    height: 110px;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 50%;
     margin-top: 70px;
     position: relative;
@@ -111,18 +112,6 @@ main::before {
 .gemRegular img {
     width: 40px;
     height: 40px;
-}
-
-/* Vertical Line */
-.gemRegular::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 80px;
-    background-color: white;
-    bottom: -80px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .tabDiv {
@@ -161,4 +150,20 @@ main::before {
     border-bottom: 1px solid white;
     align-self: self-start;
     margin-left: 10%;
+}
+
+/* Horizontal Lines */
+.line1, .line2 {
+    width: 85%;
+    height: 1px;
+    background-color: white;
+}
+
+/* Rotated Horizontal Line */
+.rotated-hr {
+    width: 49px;  /* Adjust line width */
+    height: 1px;
+    border: none;
+    background-color: white;
+    transform: rotate(90deg);
 }
