@@ -8,7 +8,15 @@ export default class Tab {
 
     createTabElement() {
         const tabDiv = document.createElement("div");
-        tabDiv.classList.add("tabDiv");
+        tabDiv.classList.add("tabDiv", "active");
+
+        const closeButton = document.createElement("button");
+        closeButton.classList.add("close-btn");
+        closeButton.innerHTML = "&times;";
+        closeButton.addEventListener("click", () => {
+            tabDiv.classList.remove("active");
+            tabDiv.remove();
+        });
 
         const title = document.createElement("h1");
         title.textContent = this.name;
@@ -20,6 +28,7 @@ export default class Tab {
         const text = document.createElement("p");
         text.textContent = this.content.join(" ");
 
+        tabDiv.appendChild(closeButton);
         tabDiv.appendChild(title);
         tabDiv.appendChild(image);
         tabDiv.appendChild(text);
