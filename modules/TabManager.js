@@ -1,3 +1,5 @@
+import Button from "./modules/Button.js";
+
 export default class TabManager {
     constructor(tabs, contentContainer, buttonContainer) {
         this.tabs = tabs;
