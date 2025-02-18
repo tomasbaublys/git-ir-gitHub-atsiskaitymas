@@ -42,3 +42,58 @@ main::before {
     color: white;
     position: relative;
 }
+
+.metaText {
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+}
+
+.metaText h1 {
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.metaText p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.metaText p a {
+    text-decoration: underline dotted white;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.metaText p a:hover {
+    color: rgb(148, 209, 238);
+}
+
+/* Buttons */
+.btnCenter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnCenter button {
+    text-transform: uppercase;
+    max-width: 300px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnCenter button:hover {
+    background-color: rgba(152, 152, 152, 0.381);
+}
