@@ -1,4 +1,4 @@
-import Button from "./modules/Button.js";
+import Button from "./Button.js";
 
 export default class TabManager {
     constructor(tabs, contentContainer, buttonContainer) {
