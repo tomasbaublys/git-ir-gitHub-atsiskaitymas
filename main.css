@@ -140,13 +140,20 @@ main::before {
     display: flex !important;
 }
 
+/* Modal Header - Flexbox for Title and Close Button */
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 /* Tab Title */
 .tabDiv h1 {
     text-transform: uppercase;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
-    border-bottom: 2px solid white;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -169,15 +176,12 @@ main::before {
 
 /* Close Button */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 36px;
-    font-weight: bold;
-    cursor: pointer;
+    font-size: 36px; /* Enlarged "X" button */
     background: none;
     border: none;
     color: white;
+    cursor: pointer;
+    padding: 10px 15px; /* Increased padding for better click area */
     transition: transform 0.2s ease-in-out;
 }
 
@@ -215,6 +219,12 @@ main::before {
         padding: 20px;
     }
 
+    .tab-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .tabDiv h1 {
         font-size: 20px; 
     }
@@ -222,6 +232,7 @@ main::before {
     .close-btn {
         font-size: 28px;
     }
+
     .metaText h1 {
         font-size: 2rem;
     }
