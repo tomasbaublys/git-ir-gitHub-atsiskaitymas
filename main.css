@@ -237,3 +237,11 @@ main::before {
         font-size: 2rem;
     }
 }
+
+/* Video Styling */
+.tab-video {
+    width: 100%;  /* Make sure it fits the modal width */
+    max-height: 400px; /* Limit height for a better layout */
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
